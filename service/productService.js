@@ -5,6 +5,6 @@ export const addProductInDB = async (data) => {
     const product = new Product(data);
     return await product.save();
   } catch (error) {
-    return error;
+    throw error;
   }
 };
